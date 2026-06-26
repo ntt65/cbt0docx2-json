@@ -1,11 +1,11 @@
 """
 ===============================================================================
-[CBT 기출문제 변환 엔진 V8] - MS Word to JSON (과목별 동적 폴더 라우팅 적용)
+[CBT 기출문제 변환 엔진 V8.1] - MS Word to JSON (과목별 동적 폴더 라우팅 적용)
 
 1. 목적 (Purpose)
    - 기출문제를 파싱하여 JSON으로 만들고, 도면/그림은 지정된 과목 폴더에 추출합니다.
-   - [V8 신규]: 과목명(subject_folder) 변수를 도입하여, 여러 과목의 이미지가 
-     섞이지 않고 각각의 'data/과목명/images/' 폴더에 분리 저장되도록 자동화했습니다.
+   - [V8.1 수정]: 시스템이 대괄호 인덱스를 삭제하는 버그를 완벽 회피하기 위해, 
+     format_question_ranges 등 모든 함수에서 배열 인덱스 대신 이터레이터를 사용합니다.
 ===============================================================================
 """
 
@@ -31,7 +31,6 @@ def get_paragraph_html_with_images(paragraph, doc_part, subject_folder):
     global image_counter
     html_parts = []
     
-    # 🔥 실제 컴퓨터에 폴더를 만들 경로와 웹 브라우저가 인식할 상대 경로 지정
     img_local_dir = os.path.join("data", subject_folder, "images")
     img_web_path = f"data/{subject_folder}/images"
     
@@ -55,11 +54,11 @@ def get_paragraph_html_with_images(paragraph, doc_part, subject_folder):
         for embed_id in embed_ids:
             if embed_id in doc_part.related_parts:
                 img_part = doc_part.related_parts[embed_id]
-                ext = img_part.content_type.split('/')[-1]
+                # 🔥 [수정] 대괄호 인덱스를 회피하기 위해 pop() 사용
+                ext = img_part.content_type.split('/').pop()
                 if ext == 'jpeg': ext = 'jpg'
                 if ext == 'x-wmf': ext = 'png'
                 
-                # 로컬 폴더 자동 생성 (예: data/energy_ginungjang/images/)
                 os.makedirs(img_local_dir, exist_ok=True)
                 img_filename = f"img_{image_counter:04d}.{ext}"
                 img_path = os.path.join(img_local_dir, img_filename)
@@ -67,7 +66,6 @@ def get_paragraph_html_with_images(paragraph, doc_part, subject_folder):
                 with open(img_path, 'wb') as f:
                     f.write(img_part.blob)
                     
-                # JSON 내부에 삽입될 웹 호환 상대 경로 태그
                 img_tag = f'\n<img src="{img_web_path}/{img_filename}" alt="기출문제 첨부 이미지" style="max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);">\n'
                 html_parts.append(img_tag)
                 image_counter += 1
@@ -134,13 +132,17 @@ def parse_question_block(full_text):
         answer_num = ans_map.get(ans_match.group(1), 0)
     
     hint_text = full_text
+    if q_match: hint_text = hint_text.replace(q_match.group(1), '') # 번호와 정답 등만 잘라냅니다
+    
+    # 해설 정확도 향상 필터링
+    hint_text = full_text
     if q_match: hint_text = hint_text.replace(q_match.group(0), '')
     if ans_match: hint_text = hint_text.replace(ans_match.group(0), '')
     for marker in ['①', '②', '③', '④']:
         opt_match = re.search(fr'{marker}\s*(.*?)(?=\n[①②③④]|\n정답|\n|$)', full_text, re.DOTALL)
         if opt_match:
             hint_text = hint_text.replace(opt_match.group(0), '')
-    
+            
     hint_text = hint_text.strip()
     
     if not any(options):
@@ -157,19 +159,33 @@ def parse_question_block(full_text):
     }
 
 def format_question_ranges(nums):
+    """
+    🔥 [V8.1 핵심수정] 시스템 인덱스 증발 버그를 회피하기 위해, 
+    대괄호와 콜론 슬라이싱을 100% 제거하고 이터레이터 패턴으로 개조한 요약 함수입니다.
+    """
     if not nums: return ""
-    nums = sorted(nums)
-    ranges = []
-    start = nums
-    end = nums
     
-    for n in nums[1:]:
+    # 중복을 제거하고 오름차순으로 정렬
+    nums_sorted = sorted(set(nums))
+    ranges = []
+    
+    # 리스트를 이터레이터로 변환하여 순차적으로 뽑아냄
+    num_iter = iter(nums_sorted)
+    
+    # 첫 번째 값을 꺼내서 start와 end에 세팅 (nums과 동일한 역할)
+    start = next(num_iter)
+    end = start
+    
+    # 나머지 숫자들을 반복하면서 연속 구간 판별
+    for n in num_iter:
         if n == end + 1:
             end = n
         else:
             ranges.append(f"{start}~{end}" if start != end else str(start))
             start = n
             end = n
+            
+    # 마지막 구간 처리
     ranges.append(f"{start}~{end}" if start != end else str(start))
     return ", ".join(ranges)
 
@@ -253,7 +269,6 @@ def parse_docx_to_json(docx_file, output_json, subject_folder):
             "questions": current_round_questions
         })
     
-    # JSON이 과목 폴더 내부에 바로 저장되도록 경로 자동 설정
     output_dir = os.path.dirname(output_json)
     if output_dir:
         os.makedirs(output_dir, exist_ok=True)
@@ -262,7 +277,7 @@ def parse_docx_to_json(docx_file, output_json, subject_folder):
         json.dump(all_rounds, f, ensure_ascii=False, indent=2)
         
     global image_counter
-    print(f"\n🎉 V8 스크립트 실행 완료!")
+    print(f"\n🎉 V8.1 스크립트 실행 완료!")
     print(f"총 {image_counter-1}개의 이미지가 'data/{subject_folder}/images/' 폴더에 추출되었습니다.")
     
     print("\n📊 [각 회차별 문제 변환 상세 보고서]")
@@ -276,9 +291,8 @@ def parse_docx_to_json(docx_file, output_json, subject_folder):
     print("-" * 65)
 
 if __name__ == "__main__":
-    # 🔥 [수정 포인트] 여기서 작업하실 과목명과 파일명을 지정해 주시면 됩니다.
-    subject_name = "energy_ginungjang"                      # 과목 폴더명 (예: "gas", "energy_ginungjang" 등)
-    input_file = "260626_energy_ginungjang_gyojeong.docx"   # 변환할 워드 파일 이름
-    output_file = f"data/{subject_name}/questions.json"     # 자동으로 해당 과목 폴더에 JSON 저장
+    subject_name = "energy_ginungjang"                      
+    input_file = "260626_energy_ginungjang_gyojeong.docx"   
+    output_file = f"data/{subject_name}/questions.json"     
     
     parse_docx_to_json(input_file, output_file, subject_name)
