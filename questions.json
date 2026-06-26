@@ -85,7 +85,7 @@
           "온수난방은 방열기의 평균온도를 80℃로 기준하고, 표준방열량은 450kcal/m²·h·℃이다.",
           "중기난방은 방열기의 평균온도를 102℃로 기준하고, 표준방열량은 650kcal/m²·h·℃이다."
         ],
-        "hint": "방열기의 방열계수는 증기난방의 경우 온수난방의 경우보다 크다.",
+        "hint": "방열기의 방열계수는 증기난방의 경우 온수난방의 경우보다 크다.\n<img src=\"images/img_0001.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 2
       },
       {
@@ -462,14 +462,14 @@
       },
       {
         "num": 39,
-        "question": "다음 랭킨사이클을 T-S선도에서 단열팽창의 과정은?",
+        "question": "다음 랭킨사이클을 T-S선도에서 단열팽창의 과정은?\n<img src=\"images/img_0002.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "options": [
           "1-2",
           "2-3-4",
           "5-6",
           "6-4"
         ],
-        "hint": "랭킨사이클 T-S선도 (T: 온도, S: 엔트로피)\n※ 포화곡선: 포화수선(좌측)과 건포화증기선(우측)\n랭킨사이클 T-S선도 각 과정\n① 1→2 : 단열압축과정 (급수펌프)\n② 2→3→4→5 : 정압가열과정 (보일러·과열기)\n③ 5→6 : 단열팽창과정 (증기터빈)\n④ 6→1 : 정압냉각과정(방열) (복수기)",
+        "hint": "랭킨사이클 T-S선도 (T: 온도, S: 엔트로피)\n※ 포화곡선: 포화수선(좌측)과 건포화증기선(우측)\n랭킨사이클 T-S선도 각 과정\n① 1→2 : 단열압축과정 (급수펌프)\n② 2→3→4→5 : 정압가열과정 (보일러·과열기)\n③ 5→6 : 단열팽창과정 (증기터빈)\n④ 6→1 : 정압냉각과정(방열) (복수기)\n<img src=\"images/img_0003.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 3
       },
       {
@@ -493,7 +493,7 @@
           "2종압력용기",
           "온수보일러"
         ],
-        "hint": "특정열사용기기자재 품목\n※ 난방기기는 특정열사용기자재에 해당하지 않음",
+        "hint": "특정열사용기기자재 품목\n<img src=\"images/img_0004.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">\n※ 난방기기는 특정열사용기자재에 해당하지 않음",
         "answer": 2
       },
       {
@@ -553,29 +553,29 @@
           "역률이 양호하다.",
           "자기 쏠림이 적다."
         ],
-        "hint": "",
+        "hint": "<img src=\"images/img_0005.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 4
       },
       {
         "num": 47,
         "question": "다음 배관 중 스위블형 신축이음이라고 볼 수 없는 것은?",
         "options": [
-          "②",
-          "③ ④",
-          "④",
-          "스위블형 신축이음 (그림 보기)"
+          "<img src=\"images/img_0006.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
+          "<img src=\"images/img_0007.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
+          "<img src=\"images/img_0008.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
+          "<img src=\"images/img_0009.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">"
         ],
         "hint": "스위블형 신축이음 (그림 보기)\n[그림①] 루프형 신축이음 - U자형 굽힘배관 형태로 스위블형이 아님\n[그림②] 벨로즈형 신축이음 - 아코디언 주름관 형태로 스위블형이 아님\n[그림③] 스위블형 신축이음 ✓ - 2개 이상 엘보를 조합한 형태\n[그림④] 슬리브형 신축이음 - 미끄럼 이음 형태로 스위블형이 아님\n스위블형(Swivel) 신축이음\n회전이음, 지름이음이라고도 불리며, 2개 이상의 엘보를 조합하여 설치한 신축이음으로 신축이 큰 배관에는 누설의 우려가 있고, 주로 증기 및 온수난방배관에 사용된다.",
         "answer": 1
       },
       {
         "num": 48,
-        "question": "아래에 주어진 평면도를 등각투상도로 나타낼 때 맞는 것은?",
+        "question": "아래에 주어진 평면도를 등각투상도로 나타낼 때 맞는 것은?\n<img src=\"images/img_0010.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "options": [
-          "②",
-          "③              ④",
-          "④",
-          "등각투상도 : 정면, 측면, 평면도의 형상이 모두 나타나도록 투상하는 도법으로 사선의 각도는 30°이다."
+          "<img src=\"images/img_0011.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
+          "<img src=\"images/img_0012.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
+          "<img src=\"images/img_0013.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
+          "<img src=\"images/img_0014.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">"
         ],
         "hint": "등각투상도 : 정면, 측면, 평면도의 형상이 모두 나타나도록 투상하는 도법으로 사선의 각도는 30°이다.",
         "answer": 4
@@ -709,7 +709,7 @@
           "U꽤=6.92, L꽤=고려하지 않음",
           "U꽤=8.01, L꽤=고려하지 않음"
         ],
-        "hint": "c관리도의 관리한계선\n[참고] LCL이 음(-)인 경우, 고려하지 않는다.\n풀이\n① 중심선(c̄)\nc̄ = Σc/k = 580/20 = 2.9\n② 관리 상한선(UCL)\nUCL = c̄+3√c̄ = 2.9+3√2.9 = 8.0088\n③ 관리 하한선(LCL)\nLCL = c̄-3√c̄ = 2.9-3√2.9 = -2.2 → 음(-)이므로 고려하지 않는다.",
+        "hint": "c관리도의 관리한계선\n<img src=\"images/img_0015.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">\n[참고] LCL이 음(-)인 경우, 고려하지 않는다.\n풀이\n① 중심선(c̄)\nc̄ = Σc/k = 580/20 = 2.9\n② 관리 상한선(UCL)\nUCL = c̄+3√c̄ = 2.9+3√2.9 = 8.0088\n③ 관리 하한선(LCL)\nLCL = c̄-3√c̄ = 2.9-3√2.9 = -2.2 → 음(-)이므로 고려하지 않는다.",
         "answer": 4
       },
       {
@@ -721,7 +721,7 @@
           "예방코스트",
           "검사코스트"
         ],
-        "hint": "품질코스트의 구성비율\n※ 일반적으로 품질코스트 중 실패코스트(F-cost)가 가장 큰 비율을 차지한다.",
+        "hint": "품질코스트의 구성비율\n<img src=\"images/img_0016.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">\n※ 일반적으로 품질코스트 중 실패코스트(F-cost)가 가장 큰 비율을 차지한다.",
         "answer": 2
       }
     ]
@@ -920,7 +920,7 @@
           "K=7.2kcal/m²·h·℃, Δt=62℃",
           "K=7.2kcal/m²·h·℃, Δt=81℃"
         ],
-        "hint": "표준상태의 열매에 따른 방열계수 및 온도 기준표",
+        "hint": "표준상태의 열매에 따른 방열계수 및 온도 기준표\n<img src=\"images/img_0017.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 3
       },
       {
@@ -1143,10 +1143,10 @@
         "num": 35,
         "question": "배관 설비에 있어서 관경을 구할 때 사용하는 공식은? (단, V: 유속, Q: 유량, d: 관경)",
         "options": [
-          "②",
-          "③",
-          "④",
-          "Q = A·V = πD²/4·V"
+          "<img src=\"images/img_0018.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
+          "<img src=\"images/img_0019.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
+          "<img src=\"images/img_0020.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
+          "<img src=\"images/img_0021.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">"
         ],
         "hint": "Q = A·V = πD²/4·V\n→ D = √(4Q/πV)\n여기서, Q : 유량[m³/s]\nA : 면적[m²]\nV : 속도[m/s]\nπD²/4 : 원면적[m²]",
         "answer": 3
@@ -1201,7 +1201,7 @@
       },
       {
         "num": 40,
-        "question": "2MPa의 고압증기를 0.12MPa로 감압하여 사용하고자 한다. 감압밸브 입구에서의 건도가 0.9라고 할 때 감압 후의 건도는 약 얼마인가? (단, 감압과정을 교축과정으로 보다, 압력에 따른 비엔탈피는 다음과 같다)",
+        "question": "2MPa의 고압증기를 0.12MPa로 감압하여 사용하고자 한다. 감압밸브 입구에서의 건도가 0.9라고 할 때 감압 후의 건도는 약 얼마인가? (단, 감압과정을 교축과정으로 보다, 압력에 따른 비엔탈피는 다음과 같다)\n<img src=\"images/img_0022.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "options": [
           "0.85",
           "0.89",
@@ -1405,7 +1405,7 @@
       },
       {
         "num": 57,
-        "question": "어떤 공장에서 작업을 하는데 있어서 소요되는 기간과 비용이 다음 표와 같을 때 비용구배는 얼마인가? (단, 활동시간의 단위는 일(日)로 계산한다)",
+        "question": "어떤 공장에서 작업을 하는데 있어서 소요되는 기간과 비용이 다음 표와 같을 때 비용구배는 얼마인가? (단, 활동시간의 단위는 일(日)로 계산한다)\n<img src=\"images/img_0023.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "options": [
           "50,000원",
           "100,000원",
@@ -1671,7 +1671,7 @@
           "연료의 현열",
           "발생 증기 보유열"
         ],
-        "hint": "열정산 출열항목\n① 불완전연소에 의한 손실\n② 발생증기 보유열(유효출열)\n③ 노벽 방사 손실\n④ 배기가스에 의한 손실(손실량이 가장 크다)\n⑤ 미연소분에 의한 손실열\n열정산 입열항목\n① 연료의 저위발열량\n② 연료의 현열\n③ 연소 공기의 현열\n④ 급수와 연료탱크기 사용 시\n⑤ 노내 분입증기에 의한 입열",
+        "hint": "열정산 출열항목\n① 불완전연소에 의한 손실\n② 발생증기 보유열(유효출열)\n③ 노벽 방사 손실\n④ 배기가스에 의한 손실(손실량이 가장 크다)\n⑤ 미연소분에 의한 손실열\n<img src=\"images/img_0024.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">\n열정산 입열항목\n① 연료의 저위발열량\n② 연료의 현열\n③ 연소 공기의 현열\n④ 급수와 연료탱크기 사용 시\n⑤ 노내 분입증기에 의한 입열\n<img src=\"images/img_0025.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 4
       },
       {
@@ -1743,7 +1743,7 @@
           "안전밸브",
           "급수관"
         ],
-        "hint": "개방식 팽창탱크\n보통온수는 85~90℃(100℃ 이하)에 일반 주택 등에 사용되며, 최고 방열기로부터 팽창탱크 수면까지 1[m] 이상 높이로 설치한다. 용량은 온수팽창량의 2~2.5배로 한다.\n구성 : 급수관, 안전관(방출관), 배기관, 오버플로우관, 팽창관, 배수관",
+        "hint": "개방식 팽창탱크\n보통온수는 85~90℃(100℃ 이하)에 일반 주택 등에 사용되며, 최고 방열기로부터 팽창탱크 수면까지 1[m] 이상 높이로 설치한다. 용량은 온수팽창량의 2~2.5배로 한다.\n구성 : 급수관, 안전관(방출관), 배기관, 오버플로우관, 팽창관, 배수관\n<img src=\"images/img_0026.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 3
       },
       {
@@ -2144,7 +2144,7 @@
       },
       {
         "num": 58,
-        "question": "다음 표는 A 자동차 영업소의 월별 판매 실적을 나타낸 것이다. 5개월 단순 이동평균법으로 6월의 수요를 예측하면 몇 대인가? (단위:대)",
+        "question": "다음 표는 A 자동차 영업소의 월별 판매 실적을 나타낸 것이다. 5개월 단순 이동평균법으로 6월의 수요를 예측하면 몇 대인가? (단위:대)\n<img src=\"images/img_0027.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "options": [
           "120",
           "130",
@@ -2218,7 +2218,7 @@
           "방열(放熱)에 의한 열 손실",
           "미연분에 의한 열 손실"
         ],
-        "hint": "열정산 출열항목\n① 불완전연소에 의한 손실\n② 발생증기 보유열(유효출열)\n③ 노벽 방사 손실\n④ 배기가스에 의한 손실(손실량이 가장 크다)\n⑤ 미연소분에 의한 손실열",
+        "hint": "열정산 출열항목\n① 불완전연소에 의한 손실\n② 발생증기 보유열(유효출열)\n③ 노벽 방사 손실\n④ 배기가스에 의한 손실(손실량이 가장 크다)\n⑤ 미연소분에 의한 손실열\n<img src=\"images/img_0028.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 1
       },
       {
@@ -2254,7 +2254,7 @@
           "수위량과 전열량",
           "연료 공급량과 연소용 공기량"
         ],
-        "hint": "보일러 자동 제어의 제어량과 조작량의 관계",
+        "hint": "보일러 자동 제어의 제어량과 조작량의 관계\n<img src=\"images/img_0029.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 4
       },
       {
@@ -2386,7 +2386,7 @@
           "1.5",
           "0.5"
         ],
-        "hint": "냉각 레그(cooling leg)\n① 건식환수방식의 관말에 설치\n② 관내 응축수에서 생긴 플래시 증기로 인한 보일러의 수격작용 방지(주 역할 : 플래시 증기 응축 후 증기트랩으로 유입)\n③ 주관과 수직으로 100[mm] 이상 내리고 하부로 150[mm] 이상 연장하여 관내 슬러지 등 협잡물을 제거할 목적으로 드레인 포켓(drain pocket)을 만들어 준다.\n④ 주관에서 1.5[m] 이상 보온하지 않은 나관을 설치하며 냉각 레그 끝에 트랩을 설치하여 응축수를 제거한다.",
+        "hint": "냉각 레그(cooling leg)\n① 건식환수방식의 관말에 설치\n② 관내 응축수에서 생긴 플래시 증기로 인한 보일러의 수격작용 방지(주 역할 : 플래시 증기 응축 후 증기트랩으로 유입)\n③ 주관과 수직으로 100[mm] 이상 내리고 하부로 150[mm] 이상 연장하여 관내 슬러지 등 협잡물을 제거할 목적으로 드레인 포켓(drain pocket)을 만들어 준다.\n④ 주관에서 1.5[m] 이상 보온하지 않은 나관을 설치하며 냉각 레그 끝에 트랩을 설치하여 응축수를 제거한다.\n<img src=\"images/img_0030.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 3
       },
       {
@@ -2523,7 +2523,7 @@
       },
       {
         "num": 29,
-        "question": "아래와 같은 베르누이 방정식에서 P/γ항은 무엇을 뜻하는가? (단, H : 전수두, P : 압력, γ : 비중량, V : 유속, g : 중력 가속도, Z : 위치 수두)",
+        "question": "아래와 같은 베르누이 방정식에서 P/γ항은 무엇을 뜻하는가? (단, H : 전수두, P : 압력, γ : 비중량, V : 유속, g : 중력 가속도, Z : 위치 수두)\n<img src=\"images/img_0031.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "options": [
           "압력 수두",
           "속도 수두",
@@ -2595,7 +2595,7 @@
       },
       {
         "num": 35,
-        "question": "다음에 있는 내용을 인젝터의 기동 순서로 올바르게 나열한 것은?",
+        "question": "다음에 있는 내용을 인젝터의 기동 순서로 올바르게 나열한 것은?\n<img src=\"images/img_0032.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "options": [
           "㉯→㉱→㉰→㉮",
           "㉮→㉯→㉰→㉱",
@@ -2842,7 +2842,7 @@
           "4",
           "5"
         ],
-        "hint": "UCL = 22.15 = x̄ + A₂·R̄\n→ LCL = 6.85 = x̄ - A₂·R̄\n15.3 = 2A₂×7.5\nA₂ = 15.3/(2×7.5) = 1.02\n→ A₂가 1.02이면 n = 3이 된다.\nx̄ − R 관리도 관리한계선\n[참고] n ≤ 6일 때 D3의 값은 음(−)의 값이므로 \"La은 고려하지 않는다\"는 의미로 '-'로 한다.",
+        "hint": "UCL = 22.15 = x̄ + A₂·R̄\n→ LCL = 6.85 = x̄ - A₂·R̄\n15.3 = 2A₂×7.5\nA₂ = 15.3/(2×7.5) = 1.02\n→ A₂가 1.02이면 n = 3이 된다.\nx̄ − R 관리도 관리한계선\n<img src=\"images/img_0033.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">\n[참고] n ≤ 6일 때 D3의 값은 음(−)의 값이므로 \"La은 고려하지 않는다\"는 의미로 '-'로 한다.",
         "answer": 2
       },
       {
@@ -3545,7 +3545,7 @@
           "1-α",
           "1-β"
         ],
-        "hint": "1-α : 좋은 로트를 합격시킬 확률\n1-β : 나쁜 로트를 불합격시킬 확률\nOC곡선\n여기서 P: 로트의 부적합품률(%)\nL(p) : 로트가 합격할 확률\nα : 좋은 로트가 불합격될 확률 (생산자 위험)\nβ : 나쁜 로트가 합격할 확률 (소비자 위험)\n1-α : 좋은 로트가 합격될 확률 ✓\n1-β : 나쁜 로트가 불합격될 확률",
+        "hint": "1-α : 좋은 로트를 합격시킬 확률\n1-β : 나쁜 로트를 불합격시킬 확률\nOC곡선\n<img src=\"images/img_0034.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">\n여기서 P: 로트의 부적합품률(%)\nL(p) : 로트가 합격할 확률\nα : 좋은 로트가 불합격될 확률 (생산자 위험)\nβ : 나쁜 로트가 합격할 확률 (소비자 위험)\n1-α : 좋은 로트가 합격될 확률 ✓\n1-β : 나쁜 로트가 불합격될 확률",
         "answer": 4
       },
       {
@@ -3581,7 +3581,7 @@
           "ū±3√(ū/n)",
           "ū±3√(ū/n̄)"
         ],
-        "hint": "u관리도의 관리한계계산",
+        "hint": "u관리도의 관리한계계산\n<img src=\"images/img_0035.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 2
       },
       {
@@ -3744,7 +3744,7 @@
           "40",
           "50"
         ],
-        "hint": "온수팽창량 계산\nΔV = V×(1/ρ₁ - 1/ρ₂)[L]\n= 2.28×(1/0.9828 - 1/0.9957) ≈ 30(L)",
+        "hint": "온수팽창량 계산\nΔV = V×(1/ρ₁ - 1/ρ₂)[L]\n= 2.28×(1/0.9828 - 1/0.9957) ≈ 30(L)\n<img src=\"images/img_0036.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 2
       },
       {
@@ -4265,14 +4265,14 @@
       },
       {
         "num": 53,
-        "question": "보기와 같은 배관 라인의 정투영도(평면도)를 입체적인 등각도로 표시한 것으로 다음 중 가장 적합한 것은?",
+        "question": "보기와 같은 배관 라인의 정투영도(평면도)를 입체적인 등각도로 표시한 것으로 다음 중 가장 적합한 것은?\n<img src=\"images/img_0037.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "options": [
-          "②  ✓",
-          "✓",
-          "④",
-          "등각투상도 : 정면, 측면, 평면도의 형상이 모두 나타나도록 투상하는 도법으로 사선의 각도는 30°이다."
+          "<img src=\"images/img_0038.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
+          "<img src=\"images/img_0039.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
+          "<img src=\"images/img_0040.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
+          "<img src=\"images/img_0041.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">"
         ],
-        "hint": "등각투상도 : 정면, 측면, 평면도의 형상이 모두 나타나도록 투상하는 도법으로 사선의 각도는 30°이다.",
+        "hint": "✓\n\n         \n등각투상도 : 정면, 측면, 평면도의 형상이 모두 나타나도록 투상하는 도법으로 사선의 각도는 30°이다.",
         "answer": 1
       },
       {
@@ -4560,7 +4560,7 @@
       },
       {
         "num": 17,
-        "question": "다음 매연 농도를 구하는 공식에서 ( ) 안에 적합한 값은?",
+        "question": "다음 매연 농도를 구하는 공식에서 ( ) 안에 적합한 값은?\n<img src=\"images/img_0042.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "options": [
           "5",
           "10",
@@ -4999,7 +4999,7 @@
           "설치장소 변경검사 : 보일러 유효 기간은 2년",
           "개조검사 : 압력 용기 및 철금속 가열로 유효 기간은 2년"
         ],
-        "hint": "검사의 유효기간\n\n<table class=\"nested-table\"><tr><th>검사의 종류</th><th>검사 유효기간</th></tr><tr><td>설치검사</td><td>• 보일러 : 1년, 다만, 운전성능 경우에는 부문의 3년 1개월로 한다<br> • 압력용기 및 철근 개조검사 설치장소 변경검사 안전검사 철금속가열로 : 2년</td></tr><tr><td>개조검사</td><td>• 보일러 : 1년 <br>• 압력용기 및 철금속가열로: 2년</td></tr><tr><td>설치장소 변경검사</td><td>• 보일러 : 1년 <br>• 압력용기 및 철금속가열로 : 2년</td></tr><tr><td>계속사용검사</td><td>안전검사</td><td>• 보일러 : 1년<br>   • 압력용기 : 2년</td></tr><tr><td>계속사용검사</td><td>운전<br>성능검사</td><td>• 보일러 : 1년<br>• 철금속가열로 : 2년</td></tr><tr><td>계속사용검사</td><td>재사용검사</td><td>• 보일러 : 1년 <br>• 압력용기및 철금속가열로 : 2년</td></tr></table>",
+        "hint": "검사의 유효기간\n\n<table class=\"nested-table\"><tr><th>검사의 종류</th><th>검사 유효기간</th></tr><tr><td>설치검사</td><td>• 보일러 : 1년, 다만, 운전성능 경우에는 부문의 3년 1개월로 한다<br>• 압력용기 및 철근 개조검사 설치장소 변경검사 안전검사 철금속가열로 : 2년</td></tr><tr><td>개조검사</td><td>• 보일러 : 1년<br>• 압력용기 및 철금속가열로: 2년</td></tr><tr><td>설치장소 변경검사</td><td>• 보일러 : 1년<br>• 압력용기 및 철금속가열로 : 2년</td></tr><tr><td>계속사용검사</td><td>안전검사</td><td>• 보일러 : 1년<br>• 압력용기 : 2년</td></tr><tr><td>계속사용검사</td><td>운전<br>성능검사</td><td>• 보일러 : 1년<br>• 철금속가열로 : 2년</td></tr><tr><td>계속사용검사</td><td>재사용검사</td><td>• 보일러 : 1년<br>• 압력용기및 철금속가열로 : 2년</td></tr></table>",
         "answer": 1
       },
       {
@@ -5076,7 +5076,7 @@
       },
       {
         "num": 60,
-        "question": "그림과 같은 계획 공정도(network)에서 주공정은?\n(단, 화살표 아래의 숫자는 활동 시간을 나타낸 것이다)",
+        "question": "그림과 같은 계획 공정도(network)에서 주공정은?\n(단, 화살표 아래의 숫자는 활동 시간을 나타낸 것이다)\n<img src=\"images/img_0043.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "options": [
           "ㄱ→ㄷ→ㅂ",
           "ㄱ→ㄴ→ㅁ→ㅂ",
@@ -5323,7 +5323,7 @@
       },
       {
         "num": 20,
-        "question": "다음 그림은 몇 요소 수위제어 방식을 나타낸 것인가?",
+        "question": "다음 그림은 몇 요소 수위제어 방식을 나타낸 것인가?\n<img src=\"images/img_0044.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "options": [
           "불완전연소가 되기 쉽다.",
           "미연소에 의한 열손실이 증가한다.",
@@ -5402,7 +5402,7 @@
           "평판의 두께",
           "고온 및 저온유체 열전달을"
         ],
-        "hint": "열관류을 계산 공식",
+        "hint": "열관류을 계산 공식\n<img src=\"images/img_0045.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 4
       },
       {
@@ -5474,7 +5474,7 @@
           "관의 안지름에 반비례한다.",
           "관 마찰계수에 비례한다."
         ],
-        "hint": "원형관의 마찰손실\n•\n•\n•",
+        "hint": "원형관의 마찰손실\n<img src=\"images/img_0046.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">\n•\n•\n•",
         "answer": 2
       },
       {
@@ -5534,7 +5534,7 @@
           "2.0",
           "41.75"
         ],
-        "hint": "",
+        "hint": "<img src=\"images/img_0047.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">\n<img src=\"images/img_0048.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 2
       },
       {
@@ -5829,7 +5829,7 @@
           "배관의 기울기가 필요 없다.",
           "공급일방에 유연성이 있다."
         ],
-        "hint": "고압증기 사용 시 특징\n\n<table class=\"nested-table\"><tr><th>장점</th><th>• 배관의 직경을 작게 할 수 있다.<br> • 난방 이외의 시설에도 증기를 사용할 수 있다.<br> • 압력이나 속도를 높일 수 있다.<br> • 공급열량에 유연성이 있다.</th></tr><tr><td>단점</td><td>• 응축수관의 부식이 많다.<br> • 응축수 재증발 및 방사손실에 의한 열손실이 많다.<br> • 외기온도 변화에 대한 실온제어가 어렵다(부하변동에 응하기가 어렵다) • 배관의 구배에 신경써야 한다.</td></tr></table>",
+        "hint": "고압증기 사용 시 특징\n\n<table class=\"nested-table\"><tr><th>장점</th><th>• 배관의 직경을 작게 할 수 있다.<br>• 난방 이외의 시설에도 증기를 사용할 수 있다.<br>• 압력이나 속도를 높일 수 있다.<br>• 공급열량에 유연성이 있다.</th></tr><tr><td>단점</td><td>• 응축수관의 부식이 많다.<br>• 응축수 재증발 및 방사손실에 의한 열손실이 많다.<br>• 외기온도 변화에 대한 실온제어가 어렵다(부하변동에 응하기가 어렵다) • 배관의 구배에 신경써야 한다.</td></tr></table>",
         "answer": 3
       },
       {
@@ -5973,7 +5973,7 @@
           "3,115kg/h",
           "3,220kg/h"
         ],
-        "hint": "상당증발량",
+        "hint": "상당증발량\n<img src=\"images/img_0049.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 3
       },
       {
@@ -6021,7 +6021,7 @@
           "55,0mmAq",
           "51,3mmAg"
         ],
-        "hint": "(약식) 이론통풍력 계산공식\n배기가스 경우 비중량을 대기에 대한 비중량으로",
+        "hint": "(약식) 이론통풍력 계산공식\n배기가스 경우 비중량을 대기에 대한 비중량으로\n<img src=\"images/img_0050.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 1
       },
       {
@@ -6033,7 +6033,7 @@
           "16.200kcal",
           "418,400kcal"
         ],
-        "hint": "탄소1[kmol]의 질량은 12[kg]이므로 1[kg]당 발열량은 아래와 같다.",
+        "hint": "탄소1[kmol]의 질량은 12[kg]이므로 1[kg]당 발열량은 아래와 같다.\n<img src=\"images/img_0051.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 2
       },
       {
@@ -6117,7 +6117,7 @@
           "300",
           "327°℃"
         ],
-        "hint": "이상기체 상태방정식",
+        "hint": "이상기체 상태방정식\n<img src=\"images/img_0052.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 4
       },
       {
@@ -6724,7 +6724,7 @@
           "1.5",
           "0.5"
         ],
-        "hint": "냉각레그(cooling leg)\n① 건식환수방식의 관말에 설치\n② 관내 응축수에서 생긴 플래시 증기로 인한 보일러의 수격작용 방지(주 역할 : 플래시 증기 응축 후 증기트랩으로 유입)\n③ 주관과 수직으로 100[mm] 이상 내리고 하부로 150[mm] 이상 연장하여 관내 슬러지 등 협착물을 제거할 목적으로 드레인 포켓(drain pocket)을 만들어 준다.\n④ 주관에서 1.5m] 이상 보온하지 않은 나관을 설치하며 냉각레그 끝에는트랩을 설치하여 응축수를 제거한다.",
+        "hint": "냉각레그(cooling leg)\n① 건식환수방식의 관말에 설치\n② 관내 응축수에서 생긴 플래시 증기로 인한 보일러의 수격작용 방지(주 역할 : 플래시 증기 응축 후 증기트랩으로 유입)\n③ 주관과 수직으로 100[mm] 이상 내리고 하부로 150[mm] 이상 연장하여 관내 슬러지 등 협착물을 제거할 목적으로 드레인 포켓(drain pocket)을 만들어 준다.\n④ 주관에서 1.5m] 이상 보온하지 않은 나관을 설치하며 냉각레그 끝에는트랩을 설치하여 응축수를 제거한다.\n<img src=\"images/img_0053.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 3
       },
       {
@@ -6952,7 +6952,7 @@
           "위치에너지",
           "열량에너지"
         ],
-        "hint": "베르누이 방정식:\n모든 단면에 작용하는 위치 수두, 압력 수 속도 수두의 합은 항상 일정하다.\nH = P/γ + V²/2g + Z\n열량에너지는 관계없다.",
+        "hint": "베르누이 방정식:\n모든 단면에 작용하는 위치 수두, 압력 수 속도 수두의 합은 항상 일정하다.\nH = P/γ + V²/2g + Z\n열량에너지는 관계없다.\n<img src=\"images/img_0054.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 4
       },
       {
@@ -7132,17 +7132,17 @@
           "압력계",
           "온도계"
         ],
-        "hint": "• 밀폐식 팽창탱크 : 압력계, 안전밸브, 수위계 급수관, 배수관, 팽창관, 공기공급관\n• 개방식 팽창탱크 : 통기관(배기관), 오버 플로우관, 배수관, 팽창관, 급수관\n온도계는 설치하지 않아도 된다.",
+        "hint": "• 밀폐식 팽창탱크 : 압력계, 안전밸브, 수위계 급수관, 배수관, 팽창관, 공기공급관\n• 개방식 팽창탱크 : 통기관(배기관), 오버 플로우관, 배수관, 팽창관, 급수관\n온도계는 설치하지 않아도 된다.\n<img src=\"images/img_0055.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">\n \n<img src=\"images/img_0056.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 4
       },
       {
         "num": 50,
         "question": "관말단의 표시 중 나사박음식 캡의 표시기호는?",
         "options": [
-          "②",
-          "③",
-          "④",
-          "나사관 캡 : 나사이음 캡"
+          "<img src=\"images/img_0057.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
+          "<img src=\"images/img_0058.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
+          "<img src=\"images/img_0059.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
+          "<img src=\"images/img_0060.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">"
         ],
         "hint": "나사관 캡 : 나사이음 캡\n① 나사용 캡\n② 용접용 캡\n③ 막힘 플랜지",
         "answer": 1
@@ -7264,7 +7264,7 @@
           "품질특성치가 치명적인 결점을 포함하는 경우",
           "다수 다량의 것으로 어느 정도 부적합품이 섞여도 괜찮을 경우"
         ],
-        "hint": "전수검사와 샘플링 검사의 비교\n\n<table class=\"nested-table\"><tr><th>전수검사</th><th>• 귀금속과 같은 고가품인 경우 전수<br>• 검사비용에 비해 얻는 효과가 큰 경우<br>• 안전에 중대한 영향을 미치는 경우 <br>• 부적합품이 1개라도 혼입되면 큰 경제적 손실이 있는 경우</th></tr><tr><td>샘플링 검사</td><td>• 파괴검사인 경우 <br>• 검사항목이 많은 경우 <br>• 생산자에게 품질 향상의 자극을 주고 싶은 경우 <br>• 다수 다량의 생산품으로 어느정도 부적합품의 혼입이 허용되는 경우</td></tr></table>",
+        "hint": "전수검사와 샘플링 검사의 비교\n\n<table class=\"nested-table\"><tr><th>전수검사</th><th>• 귀금속과 같은 고가품인 경우 전수<br>• 검사비용에 비해 얻는 효과가 큰 경우<br>• 안전에 중대한 영향을 미치는 경우<br>• 부적합품이 1개라도 혼입되면 큰 경제적 손실이 있는 경우</th></tr><tr><td>샘플링 검사</td><td>• 파괴검사인 경우<br>• 검사항목이 많은 경우<br>• 생산자에게 품질 향상의 자극을 주고 싶은 경우<br>• 다수 다량의 생산품으로 어느정도 부적합품의 혼입이 허용되는 경우</td></tr></table>",
         "answer": 3
       }
     ]
@@ -7600,7 +7600,7 @@
       },
       {
         "num": 28,
-        "question": "다음 T-S선도는 어떤 사이클인가?",
+        "question": "다음 T-S선도는 어떤 사이클인가?\n<img src=\"images/img_0061.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "options": [
           "랭킨 사이클",
           "카르노 사이클",
@@ -7876,7 +7876,7 @@
       },
       {
         "num": 51,
-        "question": "다음의 인장시험 곡선에서 하중을 제거하였을 경우 처음 상태로 되돌아가는 탄성변형의 구간은?",
+        "question": "다음의 인장시험 곡선에서 하중을 제거하였을 경우 처음 상태로 되돌아가는 탄성변형의 구간은?\n<img src=\"images/img_0062.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "options": [
           "0~F",
           "0~B",
@@ -7979,7 +7979,7 @@
           "Un=6.92, Lc=고려하지 않음",
           "Uc=8.01, La= 고려하지 않음"
         ],
-        "hint": "c 관리도의 관리한계선",
+        "hint": "c 관리도의 관리한계선\n<img src=\"images/img_0063.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">\n\n<img src=\"images/img_0064.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 4
       },
       {
@@ -8694,7 +8694,7 @@
           "0.502",
           "0.252"
         ],
-        "hint": "",
+        "hint": "<img src=\"images/img_0065.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">\n<img src=\"images/img_0066.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 4
       },
       {
@@ -8718,7 +8718,7 @@
           "부적합품의 출현개수에 대한 표준편차는 D(x)=nP이다.",
           "P≤ 0.5이고, DP ≤ 5일 때는 정규 분포에 근사한다."
         ],
-        "hint": "이항분포\n부적합품수, 부적합품률 등의 계수치에 사용되며 모집단 부적합품률 P의 로트로부터 n개의 샘플을 뽑을 때, 샘플 중의 발견되는 부적합품수 x의 확률을 의미한다.\n① 계산공식",
+        "hint": "이항분포\n부적합품수, 부적합품률 등의 계수치에 사용되며 모집단 부적합품률 P의 로트로부터 n개의 샘플을 뽑을 때, 샘플 중의 발견되는 부적합품수 x의 확률을 의미한다.\n① 계산공식\n<img src=\"images/img_0067.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 2
       }
     ]
@@ -8845,7 +8845,7 @@
           "45m",
           "60m"
         ],
-        "hint": "상사법칙(양정)\nP₂=(N₂/N₁)² × P₁\nP₂=(900/600)² × 20 = 45[m]",
+        "hint": "상사법칙(양정)\nP₂=(N₂/N₁)² × P₁\nP₂=(900/600)² × 20 = 45[m]\n<img src=\"images/img_0068.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 2
       },
       {
@@ -9145,7 +9145,7 @@
           "정압변화가 들어있다.",
           "단열, 정압, 정적, 폴리트로픽 변화가 각각 하나이다."
         ],
-        "hint": "랭킨사이클 T-S선도\n1-2 : 단열압축과정\n2-3-4-5 : 정압가열과정\n5-6 : 단열팽창과정\n6-1 : 정압냉각(고압에서 정압냉각 방법)",
+        "hint": "랭킨사이클 T-S선도\n1-2 : 단열압축과정\n2-3-4-5 : 정압가열과정\n5-6 : 단열팽창과정\n6-1 : 정압냉각(고압에서 정압냉각 방법)\n<img src=\"images/img_0069.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 3
       },
       {
@@ -9284,12 +9284,12 @@
         "num": 47,
         "question": "관 A가 화면에 직각으로 반대쪽으로 내려가 있는 경우는 어느 것인가?",
         "options": [
-          "②",
-          "③ ✓",
-          "✓",
-          "배관 도시 기호 (관이 화면에 수직인 경우)\\n[그림①] ──○── : 화면 앞쪽(보는 방향)으로 올라오는 관\\n[그림②] ──●── : 화면 뒤쪽(들어가는 방향)으로 내려가는 관 ✓\\n[그림③] ──⊙── : 앞쪽에서 오는 관\\n[그림④] ──⊗── : 뒤쪽으로 가는 관\\n\\n※ 관 A가 화면에 직각으로 반대쪽(뒤쪽)으로 내려가는 경우 → ③번 기호 사용\\n화살표가 안으로 들어가는 방향(×) 표시"
+          "<img src=\"images/img_0070.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
+          "<img src=\"images/img_0071.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
+          "<img src=\"images/img_0072.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
+          "<img src=\"images/img_0073.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">"
         ],
-        "hint": "",
+        "hint": "✓\n\n배관 도시 기호 (관이 화면에 수직인 경우)\\n[그림①] ──○── : 화면 앞쪽(보는 방향)으로 올라오는 관\\n[그림②] ──●── : 화면 뒤쪽(들어가는 방향)으로 내려가는 관 ✓\\n[그림③] ──⊙── : 앞쪽에서 오는 관\\n[그림④] ──⊗── : 뒤쪽으로 가는 관\\n\\n※ 관 A가 화면에 직각으로 반대쪽(뒤쪽)으로 내려가는 경우 → ③번 기호 사용\\n화살표가 안으로 들어가는 방향(×) 표시",
         "answer": 2
       },
       {
@@ -9572,7 +9572,7 @@
           "25mm",
           "32mm"
         ],
-        "hint": "안전밸브 및 압력방출장치의 지름은 25A 이상으로 한다.\n① 최고사용압력 0.1MP(1kgf.cm^2)이하의 보일러.\n② 기술적 원인 최고사용압력 0.5MP(5kgf/cm^2)이하의 보일러로 동체의 안지름이 500mm 이하이며 동체의 길이가 1,000mm 이하인 보일러\n③ 최고사용압력 0.5MP(5kgf.cm^2)이하의 보일러로 전열면적 2m^2 이하인 관류 보일러\n④ 최대증발량 5t/h 이하의 관류 보일러\n5) 소용량강철제 보일러, 소용량주철제보일러",
+        "hint": "안전밸브 및 압력방출장치의 지름은 25A 이상으로 한다.\n① 최고사용압력 (1kgf.cm^2)이하의 보일러.\n② 기술적 원인 최고사용압력 0.5MP(5kgf/cm^2)이하의 보일러로 동체의 안지름이 500mm 이하이며 동체의 길이가 1,000mm 이하인 보일러\n③ 최고사용압력 (5kgf.cm^2)이하의 보일러로 전열면적 2m^2 이하인 관류 보일러\n④ 최대증발량 5t/h 이하의 관류 보일러\n5) 소용량강철제 보일러, 소용량주철제보일러",
         "answer": 3
       },
       {
@@ -9757,7 +9757,7 @@
       },
       {
         "num": 26,
-        "question": "다음의 베르누이 방정식에서 P/γ항은 무엇을 뜻하는가?\n(단 H: 전 수도,P : 압력, r : 비중량, V : 유속 , g : 중력가속도 , z : 위치 수두)",
+        "question": "다음의 베르누이 방정식에서 P/γ항은 무엇을 뜻하는가?\n(단 H: 전 수도,P : 압력, r : 비중량, V : 유속 , g : 중력가속도 , z : 위치 수두)\n<img src=\"images/img_0074.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "options": [
           "압력수두",
           "속도수두",
@@ -10736,14 +10736,14 @@
       },
       {
         "num": 47,
-        "question": "아래에 주어진 평면도를 등각투상도로 나타낼 때 옳은 것은?[그림: 정면도·우측면도·평면도가 주어진 3면도 (단이 있는 L자형 계단 구조)][보기: ① 계단형 직육면체 등각도 ② 단이 있는 L형 등각도 ③ 역계단형 등각도 ④ 단이 있는 L형 변형 등각도]",
+        "question": "아래에 주어진 평면도를 등각투상도로 나타낼 때 옳은 것은?[그림: 정면도·우측면도·평면도가 주어진 3면도 (단이 있는 L자형 계단 구조)][보기: ① 계단형 직육면체 등각도 ② 단이 있는 L형 등각도 ③ 역계단형 등각도 ④ 단이 있는 L형 변형 등각도]\n<img src=\"images/img_0079.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "options": [
           "계단형 직육면체 등각도 ② 단이 있는 L형 등각도 ③ 역계단형 등각도 ④ 단이 있는 L형 변형 등각도]",
           "단이 있는 L형 등각도 ③ 역계단형 등각도 ④ 단이 있는 L형 변형 등각도]",
           "역계단형 등각도 ④ 단이 있는 L형 변형 등각도]",
           "단이 있는 L형 변형 등각도]"
         ],
-        "hint": "①         ②\n③        ④  ✓\n등각투상도\n정면, 측면, 평면도의 형상이 모두 나타나도록 투상하는 도법으로 사선의 각도는 30°이다.\n[그림①~③] 잘못된 방향의 등각도\n[그림④] 주어진 평면도에서 단이 앞쪽으로 돌출된 올바른 등각도",
+        "hint": "① \n<img src=\"images/img_0080.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">\n        ② \n<img src=\"images/img_0081.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">\n③ \n<img src=\"images/img_0082.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">\n       ④ \n<img src=\"images/img_0083.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">\n ✓\n등각투상도\n정면, 측면, 평면도의 형상이 모두 나타나도록 투상하는 도법으로 사선의 각도는 30°이다.\n[그림①~③] 잘못된 방향의 등각도\n[그림④] 주어진 평면도에서 단이 앞쪽으로 돌출된 올바른 등각도",
         "answer": 4
       },
       {
@@ -10827,7 +10827,7 @@
           "0.012mm",
           "0.0012mm"
         ],
-        "hint": "",
+        "hint": "<img src=\"images/img_0084.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 3
       },
       {
@@ -10839,7 +10839,7 @@
           "1-α",
           "1-β"
         ],
-        "hint": "OC 곡선\n1-α : 좋은 로트를 합격시킬 확률 (α는 제1종 과오 : 생산자 위험)\n1-β : 나쁜 로트를 불합격시킬 확률 (β는 제2종 과오 : 소비자 위험)",
+        "hint": "OC 곡선\n1-α : 좋은 로트를 합격시킬 확률 (α는 제1종 과오 : 생산자 위험)\n1-β : 나쁜 로트를 불합격시킬 확률 (β는 제2종 과오 : 소비자 위험)\n<img src=\"images/img_0085.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 3
       },
       {
@@ -10851,7 +10851,7 @@
           "R 관리도",
           "np 관리도"
         ],
-        "hint": "",
+        "hint": "<img src=\"images/img_0086.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 3
       },
       {
@@ -11487,7 +11487,7 @@
       },
       {
         "num": 49,
-        "question": "다음은 배관의 일정한 방향의 이동과 회전을 구속하되 다른 방향은 자유롭게 이동하게 하는 배관 지지구이다. 이 지지구의 명칭은 무엇인가?",
+        "question": "다음은 배관의 일정한 방향의 이동과 회전을 구속하되 다른 방향은 자유롭게 이동하게 하는 배관 지지구이다. 이 지지구의 명칭은 무엇인가?\n<img src=\"images/img_0087.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "options": [
           "브레이스",
           "앵거",
@@ -11523,7 +11523,7 @@
       },
       {
         "num": 52,
-        "question": "다음의 인장시험 곡선에서 하중을 제거하였을 경우 처음 상태로 되돌아가는 탄성변형의 구간은?",
+        "question": "다음의 인장시험 곡선에서 하중을 제거하였을 경우 처음 상태로 되돌아가는 탄성변형의 구간은?\n<img src=\"images/img_0088.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "options": [
           "0~F",
           "0~A",
@@ -11729,7 +11729,7 @@
           "45m",
           "60m"
         ],
-        "hint": "상사법칙(양정)\nP₂=(N₂/N₁)²×P₁\nP₂=(900/600)²×20=45[m]\n상사법칙(펌프)",
+        "hint": "상사법칙(양정)\nP₂=(N₂/N₁)²×P₁\nP₂=(900/600)²×20=45[m]\n상사법칙(펌프)\n<img src=\"images/img_0089.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 3
       },
       {
@@ -11753,7 +11753,7 @@
           "12,013",
           "11,525"
         ],
-        "hint": "전장식 분출용량\nE = 120P+1/(22) × AC\n= 1/20×(15×1)+1/(22)×π×50²/4\n= 12,919.79\n안전밸브 분출용량 계산",
+        "hint": "전장식 분출용량\nE = 120P+1/(22) × AC\n= 1/20×(15×1)+1/(22)×π×50²/4\n= 12,919.79\n안전밸브 분출용량 계산\n<img src=\"images/img_0090.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 2
       },
       {
@@ -11993,7 +11993,7 @@
           "51.36kg/h",
           "82.47kg/h"
         ],
-        "hint": "저양정식 분출용량\nE = (103P+1)/22 × AC\n= (103×0.1×(10)+1) / 22 × 100×1\n= 9.23\n안전밸브 분출용량 계산공식",
+        "hint": "저양정식 분출용량\nE = (103P+1)/22 × AC\n= (103×0.1×(10)+1) / 22 × 100×1\n= 9.23\n안전밸브 분출용량 계산공식\n<img src=\"images/img_0091.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">\n\n<img src=\"images/img_0092.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 1
       },
       {
@@ -12341,7 +12341,7 @@
           "기댓값 : 2.0, 분산 : 1.3",
           "기댓값 : 2.0, 분산 : 1.6"
         ],
-        "hint": "",
+        "hint": "<img src=\"images/img_0093.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "answer": 4
       },
       {
@@ -12653,14 +12653,14 @@
       },
       {
         "num": 25,
-        "question": "다음 랭킨사이클을 T-S(온도-엔트로피)선도에서 단열 팽창 구간은?[그림: 랭킨사이클 T-S 선도 - 급수펌프(1→2), 보일러(2→3→4→5), 증기터빈(5→6), 복수기(6→1)의 순환. 세로축 T(온도), 가로축 S(엔트로피). 포화곡선 안에 1-2-3-4-5-6 점 표시]",
+        "question": "다음 랭킨사이클을 T-S(온도-엔트로피)선도에서 단열 팽창 구간은?[그림: 랭킨사이클 T-S 선도 - 급수펌프(1→2), 보일러(2→3→4→5), 증기터빈(5→6), 복수기(6→1)의 순환. 세로축 T(온도), 가로축 S(엔트로피). 포화곡선 안에 1-2-3-4-5-6 점 표시]\n<img src=\"images/img_0094.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "options": [
           "1-2",
           "2-3-4",
           "5-6",
           "6-1"
         ],
-        "hint": "T-S선도 (T: 온도, S: 엔트로피)\nT↑   포화수선   건포화증기선\n랭킨사이클 T-S선도 각 과정\n1→2 : 단열압축과정 (급수펌프)\n2→3→4→5 : 정압가열과정 (보일러·과열기)\n5→6 : 단열팽창과정 ✓ (증기터빈)\n6→1 : 정압냉각과정 (복수기)",
+        "hint": "T-S선도 (T: 온도, S: 엔트로피)\nT↑   포화수선   건포화증기선\n<img src=\"images/img_0095.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">\n랭킨사이클 T-S선도 각 과정\n1→2 : 단열압축과정 (급수펌프)\n2→3→4→5 : 정압가열과정 (보일러·과열기)\n5→6 : 단열팽창과정 ✓ (증기터빈)\n6→1 : 정압냉각과정 (복수기)",
         "answer": 3
       },
       {
@@ -13013,7 +13013,7 @@
       },
       {
         "num": 55,
-        "question": "다음 그림의 AOA(Activity-on-Arc)네트워크에서 E작업을 시작하려면 어떤 작업들이 완료되어야 하는가?[그림: AOA 네트워크 - ①→(A)→②→(D)→④, ①→(B)→③→(E)→④, ①→(C)→③ / 단, 화살표 위 알파벳이 작업명]",
+        "question": "다음 그림의 AOA(Activity-on-Arc)네트워크에서 E작업을 시작하려면 어떤 작업들이 완료되어야 하는가?[그림: AOA 네트워크 - ①→(A)→②→(D)→④, ①→(B)→③→(E)→④, ①→(C)→③ / 단, 화살표 위 알파벳이 작업명]\n<img src=\"images/img_0096.png\" alt=\"기출문제 첨부 이미지\" style=\"max-width:100%; height:auto; border-radius:var(--border-radius-sm); margin:12px 0; box-shadow:var(--shadow-sm);\">",
         "options": [
           "→(A)→②→(D)→④, ①→(B)→③→(E)→④, ①→(C)→③ / 단, 화살표 위 알파벳이 작업명]",
           "→(D)→④, ①→(B)→③→(E)→④, ①→(C)→③ / 단, 화살표 위 알파벳이 작업명]",
