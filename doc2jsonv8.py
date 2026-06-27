@@ -290,9 +290,19 @@ def parse_docx_to_json(docx_file, output_json, subject_folder):
         print(f" {r['round']:<10} | 총 {len(nums):2d}문제 | 번호: {ranges_str:<20} | {status}")
     print("-" * 65)
 
+# if __name__ == "__main__":
+#     subject_name = "energy_ginungjang"                      
+#     input_file = "260626_energy_ginungjang_gyojeong.docx"   
+#     output_file = f"data/{subject_name}/questions.json"     
+
+
 if __name__ == "__main__":
-    subject_name = "energy_ginungjang"                      
-    input_file = "260626_energy_ginungjang_gyojeong.docx"   
-    output_file = f"data/{subject_name}/questions.json"     
+    # 🔥 [수정 포인트] 가스기능사 용으로 변수 3개 변경
+    subject_name = "gas"                                    
+    input_file = "gas_CBT_2017_2025.docx"                   
+    
+    # app.js가 바로 읽을 수 있도록 'gas_questions.json'으로 자동 저장되게 수정
+    output_file = f"data/{subject_name}/{subject_name}_questions.json"     
+
     
     parse_docx_to_json(input_file, output_file, subject_name)
