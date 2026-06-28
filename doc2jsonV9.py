@@ -518,4 +518,3 @@ if __name__ == "__main__":
     output_file = f"data/{subject_name}/{subject_name}_questions.json"     
     
     parse_docx_to_json(input_file, output_file, subject_name)
-
