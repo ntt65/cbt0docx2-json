@@ -1,0 +1,20 @@
+=== CBT PARSING DEBUG LOG SYSTEM START (2026-06-28 12:50:29) ===
+[ENGINE STATUS] 문서 판별 결과 -> [TABLE] 전략 배정
+[META INFO] 확보된 총 회차 데이터 수: 18개
+[INFO] [Table-Based] 1번째 표 스캔 진입 (행 수: 61)
+[INFO] [Table-Based] 2번째 표 스캔 진입 (행 수: 61)
+[INFO] [Table-Based] 3번째 표 스캔 진입 (행 수: 61)
+[INFO] [Table-Based] 4번째 표 스캔 진입 (행 수: 61)
+[INFO] [Table-Based] 5번째 표 스캔 진입 (행 수: 61)
+[INFO] [Table-Based] 6번째 표 스캔 진입 (행 수: 61)
+[INFO] [Table-Based] 7번째 표 스캔 진입 (행 수: 61)
+[INFO] [Table-Based] 8번째 표 스캔 진입 (행 수: 61)
+[INFO] [Table-Based] 9번째 표 스캔 진입 (행 수: 61)
+[INFO] [Table-Based] 10번째 표 스캔 진입 (행 수: 61)
+[INFO] [Table-Based] 11번째 표 스캔 진입 (행 수: 61)
+[INFO] [Table-Based] 12번째 표 스캔 진입 (행 수: 61)
+[INFO] [Table-Based] 13번째 표 스캔 진입 (행 수: 61)
+[INFO] [Table-Based] 14번째 표 스캔 진입 (행 수: 61)
+[INFO] [Table-Based] 15번째 표 스캔 진입 (행 수: 61)
+[SUCCESS] 파싱 성공 완료된 원천 문항 수: 900개
+[SUCCESS] JSON 파일 빌드 완료 -> data/gas/gas_questions.json
