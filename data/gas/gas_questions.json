@@ -1,8 +1,8 @@
 [
   {
     "subject": "가스기능사",
-    "year": 2017,
-    "round": "1회",
+    "year": "",
+    "round": "실전모의 1회",
     "questions": [
       {
         "num": 1,
@@ -728,8 +728,8 @@
   },
   {
     "subject": "가스기능사",
-    "year": 2017,
-    "round": "3회",
+    "year": "",
+    "round": "실전모의 2회",
     "questions": [
       {
         "num": 1,
@@ -1455,8 +1455,8 @@
   },
   {
     "subject": "가스기능사",
-    "year": 2018,
-    "round": "1회",
+    "year": "",
+    "round": "실전모의 3회",
     "questions": [
       {
         "num": 1,
@@ -2182,8 +2182,8 @@
   },
   {
     "subject": "가스기능사",
-    "year": 2018,
-    "round": "3회",
+    "year": "",
+    "round": "실전모의 4회",
     "questions": [
       {
         "num": 1,
@@ -2909,8 +2909,8 @@
   },
   {
     "subject": "가스기능사",
-    "year": 2019,
-    "round": "1회",
+    "year": "",
+    "round": "실전모의 5회",
     "questions": [
       {
         "num": 1,
@@ -3636,8 +3636,8 @@
   },
   {
     "subject": "가스기능사",
-    "year": 2019,
-    "round": "3회",
+    "year": "",
+    "round": "실전모의 6회",
     "questions": [
       {
         "num": 1,
@@ -4363,8 +4363,8 @@
   },
   {
     "subject": "가스기능사",
-    "year": 2020,
-    "round": "1회",
+    "year": "",
+    "round": "실전모의 7회",
     "questions": [
       {
         "num": 1,
@@ -5090,8 +5090,8 @@
   },
   {
     "subject": "가스기능사",
-    "year": 2020,
-    "round": "3회",
+    "year": "",
+    "round": "실전모의 8회",
     "questions": [
       {
         "num": 1,
@@ -5817,8 +5817,8 @@
   },
   {
     "subject": "가스기능사",
-    "year": 2021,
-    "round": "1회",
+    "year": "",
+    "round": "실전모의 9회",
     "questions": [
       {
         "num": 1,
@@ -6544,8 +6544,8 @@
   },
   {
     "subject": "가스기능사",
-    "year": 2021,
-    "round": "3회",
+    "year": "",
+    "round": "실전모의 10회",
     "questions": [
       {
         "num": 1,
@@ -7271,8 +7271,8 @@
   },
   {
     "subject": "가스기능사",
-    "year": 2022,
-    "round": "1회",
+    "year": "",
+    "round": "실전모의 11회",
     "questions": [
       {
         "num": 1,
@@ -7998,8 +7998,8 @@
   },
   {
     "subject": "가스기능사",
-    "year": 2022,
-    "round": "3회",
+    "year": "",
+    "round": "실전모의 12회",
     "questions": [
       {
         "num": 1,
@@ -8725,8 +8725,8 @@
   },
   {
     "subject": "가스기능사",
-    "year": 2023,
-    "round": "1회",
+    "year": "",
+    "round": "실전모의 13회",
     "questions": [
       {
         "num": 1,
@@ -9452,8 +9452,8 @@
   },
   {
     "subject": "가스기능사",
-    "year": 2023,
-    "round": "3회",
+    "year": "",
+    "round": "실전모의 14회",
     "questions": [
       {
         "num": 1,
@@ -10179,8 +10179,8 @@
   },
   {
     "subject": "가스기능사",
-    "year": 2024,
-    "round": "1회",
+    "year": "",
+    "round": "실전모의 15회",
     "questions": [
       {
         "num": 1,
