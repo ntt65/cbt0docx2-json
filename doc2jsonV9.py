@@ -232,8 +232,8 @@ def get_html_from_table(table, doc_part, subject_folder):
 
 def parse_question_block(full_text):
     full_text = full_text.replace('\t', '\n')
-    # 🔥 [수정 1]: 문제 번호를 1자리 또는 2자리 숫자로 한정하여 '2017년' 등의 타이틀 오인식 차단
-    q_match = re.search(r'^(\d{1,2})[.\s\t\xa0]*(.*?)(?=\n①|\n정답|$)', full_text, re.DOTALL)
+    # 수정 후 (연도 2017년 등을 문제 번호로 오인하지 않도록 1~2자리 숫자로 제한)
+    q_match = re.search(r'^(\d{1,2})[.\s\t]+(.*?)(?=\n①|\n정답|$)', full_text, re.DOTALL)
     if not q_match:
         snippet = full_text.replace('\n', ' ')[:40]
         # [유니코드 완전 배제 로깅]
