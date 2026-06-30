@@ -1,12 +1,12 @@
 """
 ===============================================================================
-[CBT 기출문제 변환 엔진 V12.4 - Flush Architecture (Cell-Split Delimiter)]
-- [V12.4 핵심 패치 1]: 표 구조의 문제/지문(Cell 0)과 해설/정답(Cell 1) 사이에
-  유니크하고 확실한 구분자인 '|||CELL_SPLIT|||' 델리미터를 자동 삽입하여 파싱 무결성 확보.
-- [V12.4 핵심 패치 2]: 수식이나 단위 기호(L, 분, 배 등)를 문제 번호로 오인하여 쪼개버리던
-  버그를 예방하기 위해 수학 연산자 및 단위 기호 배제 목록(EXCLUDE_LIST) 적용.
-- [V12.4 핵심 패치 3]: 지문 텍스트 최소 길이(13자 이상) 검증 및 대괄호 시작 검증을 추가하여
-  해설 속의 가짜 번호가 독립된 문항 블록을 생성하지 않도록 완벽히 방어.
+[CBT 기출문제 변환 엔진 V12.9 - Hybrid Refactored Parser]
+- [V12.9 리팩토링 핵심]: V12.7의 상태 머신(State Machine) 델리미터 주입 기법과 
+  V12.8의 물리적 2단 표 분리(|||CELL_SPLIT|||) 기법을 유기적으로 통합.
+- [동작 구조]:
+  1. 2단 표(Wrapper Table)를 만났을 때는 물리적으로 좌우를 가르는 '|||CELL_SPLIT|||'을 삽입.
+  2. 일반 텍스트/표 포맷 문항의 경우 상태 머신이 보기 4번 직후에 '[HINT_START]'를 실시간으로 주입.
+  3. 수학 연산자/단위 기호 배제 규칙(EXCLUDE_LIST)을 적용하여 수식 오인식으로 인한 문제 찢어짐 원천 차단.
 ===============================================================================
 """
 
@@ -19,6 +19,12 @@ from docx.table import Table
 import json
 import re
 import datetime
+import sys
+
+# Windows 콘솔 환경용 UTF-8 설정
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+
 
 image_counter = 1
 log_file_path = ""
@@ -37,7 +43,7 @@ def log_msg(msg, level="INFO", console=True):
         elif level == "SUCCESS":
             print(f"\033[92m{msg}\033[0m")
         elif level == "FLUSH":
-            print(f"\033[96m{msg}\033[0m") # 시안색(청록색)으로 Flush 명시
+            print(f"\033[96m{msg}\033[0m")
         else:
             print(msg)
     
@@ -46,7 +52,7 @@ def log_msg(msg, level="INFO", console=True):
         try:
             with open(log_file_path, "a", encoding="utf-8") as f:
                 f.write(f"[{now_time}] [{level}] {msg}\n")
-        except Exception as e:
+        except Exception:
             pass
 
 def get_paragraph_html_with_images(paragraph, doc_part, subject_folder):
@@ -149,7 +155,7 @@ def flatten_document(parent_element, doc, doc_part, subject_folder, added_cells,
                             added_cells.add(cell._element)
                             unique_cells.append(cell)
                     
-                    # 💡 [유니크 델리미터 도입]: 왼쪽(문제/보기) 셀과 오른쪽(해설/정답) 셀 사이에 명시적인 분리 표시 삽입
+                    # 💡 [V12.8 구조 유지]: 왼쪽(문제/보기) 셀과 오른쪽(해설/정답) 셀 사이에 명시적인 분리 표시 삽입
                     if len(unique_cells) == 2:
                         left_lines = []
                         flatten_document(unique_cells[0]._element, doc, doc_part, subject_folder, added_cells, left_lines)
@@ -162,9 +168,13 @@ def flatten_document(parent_element, doc, doc_part, subject_folder, added_cells,
                     else:
                         for cell in unique_cells:
                             flatten_document(cell._element, doc, doc_part, subject_folder, added_cells, lines)
+                            lines.append("[CELL_BREAK]")
             else:
                 html = get_html_from_table(table, doc_part, subject_folder)
-                if html: lines.append(html)
+                if html:
+                    lines.append("[TABLE_BREAK]")
+                    lines.append(html)
+                    lines.append("[TABLE_BREAK]")
         else:
             try:
                 if len(child) > 0:
@@ -175,31 +185,39 @@ def flatten_document(parent_element, doc, doc_part, subject_folder, added_cells,
 def parse_question_block(full_text):
     full_text = full_text.strip().replace('\t', ' ').replace('\xa0', ' ')
     
-    # 💡 [유니크 델리미터 파싱]: 셀 분리 표시가 있으면 이를 우선적으로 적용하여 좌우 영역 분리
+    q_num = None
+    q_text = ""
+    options = []
+    hint_text = ""
+    answer_num = 0
+    
+    # 💡 1. 2단 표(Wrapper Table) 분리 우선 적용 (V12.8 아키텍처)
     if "|||CELL_SPLIT|||" in full_text:
         parts = full_text.split("|||CELL_SPLIT|||", 1)
         left_part = parts[0].strip()
         right_part = parts[1].strip()
         
+        # 왼쪽 영역: 문제 및 보기 파싱
         q_match = re.search(Q_PATTERN + r'(.*?)(?=[\n\s]*[①②③④]|[\n\s]*정답|$)', left_part, re.DOTALL)
         if not q_match:
             preview = left_part.replace('\n', ' ')[:60]
             log_msg(f"    ❌ [형식에러] 보기 패턴을 찾을 수 없음 -> \"{preview}...\"", "ERROR", console=False)
             return None
-        
+            
         q_num = int(q_match.group(1))
-        q_text = q_match.group(2).replace('*', '').strip()
+        q_text = q_match.group(2).replace('*', '').replace('[CELL_BREAK]', '').replace('[TABLE_BREAK]', '').strip()
         
         options = []
         for marker in ['①', '②', '③', '④']:
             opt_match = re.search(fr'{marker}[\s]*(.*?)(?=[\n\s]*[①②③④]|[\n\s]*정답|$)', left_part, re.DOTALL)
             if opt_match:
-                options.append(opt_match.group(1).replace('\n', ' ').strip())
+                raw_opt = opt_match.group(1).replace('[CELL_BREAK]', '').replace('[TABLE_BREAK]', '').replace('\n', ' ').strip()
+                options.append(raw_opt)
             else:
                 options.append("")
                 
+        # 오른쪽 영역: 정답 및 힌트 파싱
         ans_match = re.search(r'정답[\s]*([①②③④])', right_part)
-        answer_num = 0
         if ans_match:
             ans_map = {'①': 1, '②': 2, '③': 3, '④': 4}
             answer_num = ans_map.get(ans_match.group(1), 0)
@@ -207,38 +225,70 @@ def parse_question_block(full_text):
         hint_text = right_part
         if ans_match:
             hint_text = hint_text.replace(ans_match.group(0), '')
-        # 힌트 내부에 남아있을 수 있는 불필요한 분리자 정돈
-        hint_text = hint_text.replace("|||CELL_SPLIT|||", "\n").strip()
+        hint_text = hint_text.replace("|||CELL_SPLIT|||", "\n").replace('[CELL_BREAK]', '\n').replace('[TABLE_BREAK]', '\n').strip()
+        hint_text = re.sub(r'\n+', '\n', hint_text).strip()
+        
+    # 💡 2. 일반 텍스트 문항: V12.7 [HINT_START] 상태 머신 기반 파싱 적용
+    elif '[HINT_START]' in full_text:
+        parts = full_text.split('[HINT_START]', 1)
+        q_and_opts = parts[0].strip()
+        hint_part = parts[1].strip()
+        
+        q_match = re.search(Q_PATTERN + r'(.*?)(?=[\n\s]*[①②③④]|$)', q_and_opts, re.DOTALL)
+        if not q_match:
+            preview = q_and_opts.replace('\n', ' ')[:60]
+            log_msg(f"    ❌ [형식에러] 보기 패턴을 찾을 수 없음 -> \"{preview}...\"", "ERROR", console=False)
+            return None
+            
+        q_num = int(q_match.group(1))
+        q_text = q_match.group(2).replace('*', '').replace('[CELL_BREAK]', '').replace('[TABLE_BREAK]', '').strip()
+        
+        options = []
+        for marker in ['①', '②', '③', '④']:
+            opt_match = re.search(fr'{marker}[\s]*(.*?)(?=[\n\s]*[①②③④]|$)', q_and_opts, re.DOTALL)
+            if opt_match:
+                raw_opt = opt_match.group(1).replace('[CELL_BREAK]', '').replace('[TABLE_BREAK]', '').replace('\n', ' ').strip()
+                options.append(raw_opt)
+            else:
+                options.append("")
+                
+        ans_match = re.search(r'정답[\s]*([①②③④])', full_text)
+        if ans_match:
+            ans_map = {'①': 1, '②': 2, '③': 3, '④': 4}
+            answer_num = ans_map.get(ans_match.group(1), 0)
+            
+        hint_text = hint_part
+        if ans_match:
+            hint_text = hint_text.replace(ans_match.group(0), '')
+        hint_text = hint_text.replace('[CELL_BREAK]', '\n').replace('[TABLE_BREAK]', '\n').strip()
         hint_text = re.sub(r'\n+', '\n', hint_text).strip()
         
     else:
-        # 일반 텍스트 포맷: 기존과 같이 진행하되 보기 4번에 종료 조건 명시 적용
+        # 💡 3. 폴백: 구분자가 둘 다 없는 경우 (기본 방식 복원)
         q_match = re.search(Q_PATTERN + r'(.*?)(?=[\n\s]*[①②③④]|[\n\s]*정답|$)', full_text, re.DOTALL)
         if not q_match:
             preview = full_text.replace('\n', ' ')[:60]
             log_msg(f"    ❌ [형식에러] 보기 패턴을 찾을 수 없음 -> \"{preview}...\"", "ERROR", console=False)
             return None
-        
+            
         q_num = int(q_match.group(1))
-        q_text = q_match.group(2).replace('*', '').strip()
+        q_text = q_match.group(2).replace('*', '').replace('[CELL_BREAK]', '').replace('[TABLE_BREAK]', '').strip()
         
         options = []
         for marker in ['①', '②', '③']:
             opt_match = re.search(fr'{marker}[\s]*(.*?)(?=[\n\s]*[①②③④]|[\n\s]*정답|$)', full_text, re.DOTALL)
             if opt_match:
-                options.append(opt_match.group(1).replace('\n', ' ').strip())
+                options.append(opt_match.group(1).replace('[CELL_BREAK]', '').replace('[TABLE_BREAK]', '').replace('\n', ' ').strip())
             else:
                 options.append("")
                 
-        # 💡 [핵심]: 보기 4번은 줄바꿈(\n)이나 정답 기호가 나오면 매칭을 종료
         opt_match = re.search(fr'④[\s]*(.*?)(?=\n|정답|$)', full_text, re.DOTALL)
         if opt_match:
-            options.append(opt_match.group(1).replace('\n', ' ').strip())
+            options.append(opt_match.group(1).replace('[CELL_BREAK]', '').replace('[TABLE_BREAK]', '').replace('\n', ' ').strip())
         else:
             options.append("")
             
         ans_match = re.search(r'정답[\s]*([①②③④])', full_text)
-        answer_num = 0
         if ans_match:
             ans_map = {'①': 1, '②': 2, '③': 3, '④': 4}
             answer_num = ans_map.get(ans_match.group(1), 0)
@@ -246,16 +296,13 @@ def parse_question_block(full_text):
         hint_text = full_text
         if q_match: hint_text = hint_text.replace(q_match.group(0), '')
         if ans_match: hint_text = hint_text.replace(ans_match.group(0), '')
-        for marker in ['①', '②', '③']:
+        for marker in ['①', '②', '③', '④']:
             opt_m = re.search(fr'{marker}[\s]*(.*?)(?=[\n\s]*[①②③④]|[\n\s]*정답|$)', full_text, re.DOTALL)
             if opt_m:
                 hint_text = hint_text.replace(opt_m.group(0), '')
-        # 보기 4번도 종료 조건 정규식을 사용하여 치환 제거
-        opt_m = re.search(fr'④[\s]*(.*?)(?=\n|정답|$)', full_text, re.DOTALL)
-        if opt_m:
-            hint_text = hint_text.replace(opt_m.group(0), '')
-        hint_text = hint_text.strip()
-        
+        hint_text = hint_text.replace('[CELL_BREAK]', '\n').replace('[TABLE_BREAK]', '\n').strip()
+        hint_text = re.sub(r'\n+', '\n', hint_text).strip()
+
     if not any(options):
         preview = full_text.replace('\n', ' ')[:60]
         log_msg(f"    ⚠️ [보기누락] {q_num}번 문항 폐기 -> \"{preview}...\"", "WARNING", console=False)
@@ -299,10 +346,8 @@ def parse_docx_to_json(docx_file, output_json, subject_folder):
     
     with open(log_file_path, "w", encoding="utf-8") as f:
         f.write("="*70 + "\n")
-        f.write(" CBT 기출문제 변환 엔진 V12.4 - 초정밀 디버깅 로그\n")
+        f.write(" CBT 기출문제 변환 엔진 V12.9 - Hybrid Refactored Architecture\n")
         f.write(f" [날짜/시간] : {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-        f.write(f" [Input 파일]: {docx_file}\n")
-        f.write(f" [Output 파일]: {output_json}\n")
         f.write("="*70 + "\n\n")
 
     doc = docx.Document(docx_file)
@@ -315,22 +360,25 @@ def parse_docx_to_json(docx_file, output_json, subject_folder):
     }
     real_subject_name = subject_map.get(subject_folder, "기출문제")
     
-    log_msg(f"\n⏳ [{real_subject_name}] 문서 선형화 및 파싱을 시작합니다...", "INFO", console=True)
+    log_msg(f"\n⏳ [{real_subject_name}] 문서 선형화 진행 중...", "INFO", console=True)
     
     lines = []
     added_cells = set()
     flatten_document(doc.element.body, doc, doc.part, subject_folder, added_cells, lines)
+    
+    log_msg("🔄 [1-Pass 스마트 파싱] 문서 스캔 및 델리미터 주입 진행...", "INFO", console=True)
     
     all_rounds = []
     current_round_questions = []
     current_round_info = None
     mock_counter = 1
     current_q_block = ""
+    current_state = "NONE" # 상태: NONE, QUESTION, OPT1~4, HINT
     
     for line in lines:
         clean_line = line.replace('\ufeff', '').replace('\u200b', '')
         
-        # 1. 💡 [핵심] 회차 헤더 감지 시 FLUSH 로직
+        # 1. 회차 헤더 감지 시 FLUSH 로직
         header_match = re.search(r'(\d{4})년\s*(\d+)회', clean_line)
         if header_match:
             # 진행 중이던 문제 블록이 있으면 먼저 닫아서 넣음
@@ -339,7 +387,7 @@ def parse_docx_to_json(docx_file, output_json, subject_folder):
                 if q_obj: current_round_questions.append(q_obj)
                 current_q_block = ""
                 
-            # 💡 [FLUSH & RESET]: 이전 회차 데이터가 존재하면 JSON 배열로 넘기고 메모리 리셋!
+            # 이전 회차 데이터가 존재하면 JSON 배열로 넘기고 메모리 리셋
             if current_round_questions:
                 if not current_round_info:
                     current_round_info = {"year": "", "round": f"실전모의 {mock_counter}회"}
@@ -353,12 +401,12 @@ def parse_docx_to_json(docx_file, output_json, subject_folder):
                 })
                 log_msg(f"\n💾 [FLUSH 완료] {current_round_info['year']}년 {current_round_info['round']} - 총 {len(current_round_questions)}문항 분리 및 저장됨\n", "FLUSH", console=True)
                 
-            # 새로운 회차 정보 세팅 및 메모리 초기화
             current_round_info = {
                 "year": int(header_match.group(1)),
                 "round": f"{header_match.group(2)}회"
             }
-            current_round_questions = [] # 리스트 완벽 초기화
+            current_round_questions = []
+            current_state = "NONE"
             log_msg(f"📌 [신규 회차 스캔 시작] {current_round_info['year']}년 {current_round_info['round']}", "INFO", console=True)
             continue
         
@@ -374,14 +422,32 @@ def parse_docx_to_json(docx_file, output_json, subject_folder):
                     if q_obj: current_round_questions.append(q_obj)
                     
                 current_q_block = line
+                current_state = "QUESTION"
                 q_num = q_match.group(1)
                 reason = q_match.group(0).strip()
                 preview = clean_line[:40].replace('\n', ' ')
                 log_msg(f"  🆕 [문항 인식] 패턴: '{reason}' -> {q_num}번 문항 | 원문: \"{preview}...\"", "INFO", console=True)
                 continue
         
-        # 문항 번호 인식이 아니면 기존 블록에 누적
+        # 3. 문제 블록 누적 및 상태 머신에 의한 [HINT_START] 주입
         if current_q_block:
+            # 힌트 상태가 아닐 때만 보기를 감지하여 [HINT_START] 삽입
+            if current_state != "HINT":
+                if re.match(r'^\s*①', clean_line):
+                    current_state = "OPT1"
+                elif re.match(r'^\s*②', clean_line):
+                    current_state = "OPT2"
+                elif re.match(r'^\s*③', clean_line):
+                    current_state = "OPT3"
+                elif re.match(r'^\s*④', clean_line):
+                    current_state = "OPT4"
+                elif re.match(r'^\s*정답', clean_line):
+                    current_q_block += '\n[HINT_START]'
+                    current_state = "HINT"
+                elif current_state == "OPT4" and clean_line.strip() != "":
+                    current_q_block += '\n[HINT_START]'
+                    current_state = "HINT"
+            
             current_q_block += '\n' + line
         else:
             if clean_line.strip() and re.search(r'^[^\w\d\n]*\d', clean_line):
@@ -393,7 +459,7 @@ def parse_docx_to_json(docx_file, output_json, subject_folder):
         q_obj = parse_question_block(current_q_block)
         if q_obj: current_round_questions.append(q_obj)
 
-    # 🔥 마지막 회차 FLUSH
+    # 마지막 회차 FLUSH
     if current_round_questions:
         if not current_round_info:
             current_round_info = {"year": "", "round": f"실전모의 {mock_counter}회"}
@@ -414,7 +480,7 @@ def parse_docx_to_json(docx_file, output_json, subject_folder):
         json.dump(all_rounds, f, ensure_ascii=False, indent=2)
         
     global image_counter
-    log_msg(f"🎉 V12.4 FLUSH ARCHITECTURE 실행 완료!", "SUCCESS", console=True)
+    log_msg(f"🎉 V12.9 Hybrid Refactored Architecture 실행 완료!", "SUCCESS", console=True)
     log_msg(f"상세 내역이 '{log_file_path}'에 저장되었습니다.", "INFO", console=True)
     
     log_msg("\n📊 [각 회차별 문제 변환 상세 보고서]", "INFO", console=True)
